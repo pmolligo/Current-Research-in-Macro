@@ -1,0 +1,257 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[A Behavorial New Keynesian Model]{Xavier Gabaix (2016): A Behavorial New Keynesian Model} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{} % Your name
+\institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+\\Carlos Montoya, Patrick Molligo and Clemens Stiewe % Your institution for the title page
+\medskip
+\textit{} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Motivation} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{Key Equations}
+\section{Critique and Conclusion}
+
+%\subsection{} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Title?}
+\begin{itemize}
+\item $C_{0}=b(C{0}+\frac {C_{1}}{R_{0}})$
+\item true income: $y_{1}=y_{1}^{d}+\hat y_{1}$
+\item perceived income with myopia: $y_{1}^{s}=y_{1}^{d}+\textcolor{red}{\bar m}\hat y_{1}$
+\item $C_{0}=\frac {b}{1-b}((1- \textcolor{red}{\bar m})d_{0}+\frac {Y_{1}}{R_{0}})$
+\item $\frac{\delta Y_{0}}{\delta \Gamma_{0}}=\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
+\item $\frac{\delta Y_{0}}{\delta G_{0}}=1+\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
+\item $\frac{b}{1-b}$: multiplier
+\item $\hat y_{1}=\Gamma$ (i.e. tax)
+\item $d_{0}$: deficit
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Behavorial Agent: Rational vs. Behavorial Consumption}
+\begin{itemize}
+\item Gabaix's derivation of the IS and Phillips curve starts with the individual consumption function $c_{t}=c_{t}^{d}+\hat c_{t}$
+\item  $\hat c_{t}$, the deviation from default consumption $c_{t}^{d}$, is where agent's (ir)rationality comes into play
+\item There are different myopia parameters: $\bar m$ is a general "cognition discounting" parameter, $m_{r}$ and $m_{y}$ allow for agents beeing partly inattentive to innovations in $r$ or $y$
+
+\end{itemize}.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Behavorial Agent: Rational vs. Behavorial Consumption}
+\begin{itemize}
+\item $\hat c_{t}$ is the agent's $rational$ expectation 
+
+		$$\hat c_{t}=E_{t}[\sum_{\tau \geq t}\frac{1}{R^{\tau-t}}(b_{r}(k_{r})\hat r_{\tau}+b_{y}\hat y_{\tau})]+O(||x||^2)$$
+\item  $b_{r}(k_{t}):=\frac {\frac {r}{R}k_{t}-\frac {1}{\gamma}c^{d}}{R^{2}}$ and $b_{y}:=\frac {r}{R}$ are the sensitivities of consumption to an increase in $r$ or $y$
+
+\item With myopic agents, expectation is $subjective$ as $\bar m$, $m_{r}$ and $m_{y}$  $<$ 1: $$\hat c_{t}=E_{t}^{\textcolor{red}{s}}[\sum_{\tau \geq t}\frac{\textcolor{red}{\bar m^{\tau-t}}}{R^{\tau-t}}(b_{r}(k_{r})\textcolor{red}{m_{r}}\hat r_{\tau}+b_{y}\textcolor{red}{m_{y}}\hat y_{\tau})]+O(||x||^2)$$
+
+\end{itemize}.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Behavorial IS Curve}
+\begin{itemize}
+\item From individual consumption function to aggregate demand: in a New Keynesian world without capital, $\hat y_{\tau}=\hat c_{\tau}$ and $x_{\tau}=\frac {\hat y_{\tau}}{c^{d}}$, which gives
+	$$x_{t}=E_{t}[\sum_{\tau \geq t}\frac{\bar m^{\tau-t}}{R^{\tau-t}}(b_{y}m_{y}x_{\tau}+\tilde{b_{r}}\hat r_{\tau})]$$
+\item Gabaix uses $M:=\frac{\textcolor{red}{\bar m}}{R-r\textcolor{red}{m_{y}}}\in [0,1]$ (attention parameter) and $\sigma:=\frac{\textcolor{red}{m_{r}}}{\gamma R(R-r\textcolor{red}{m_{y}})}$ (governs reactions of $x_{t}$ to changes in $\hat r{t}$)
+\item After some steps, he arrives at
+\end{itemize}
+
+	$$x_{t}=\textcolor{red}{M}E_{t}[x_{t+1}]-\sigma(\underbrace{i_{t}-E_{t}\pi_{t+1}-r_{t}^{n}}_\text{$\hat r_{t}$})$$
+
+\begin{itemize}
+\item If agents are perfectly rational and $M=1$, we have the traditional IS curve
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Behavorial IS Curve}
+\begin{itemize}
+\item So what about reactions to a one-time fall of the real interest rate?
+\item With common knowledge of rationality, agents also expect future consumptions of other agents to increase, resulting in a large multiplier
+\item Most experimental setups reject this strong assumption
+\item Bounded rationality: partial inattention to future changes as well as inattention to indirect effects on other lead to a smaller multiplier
+\item More realistic?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Behavorial IS curve and Fiscal Policy}
+\begin{itemize}
+\item Transfers ($\Gamma$) and government debt ($B$), but no government consumption: budget deficit is $d_ {t}=\Gamma_{t}+rB_{t}$
+\item Iteration gives that $subjective$ expectation of $\Gamma$ at time $\tau$ is $E_{t}^{s}[\Gamma_{\tau}]=-\frac {r}{R}B_{t}+\textcolor{red}{m_{y}\bar m^{\tau-t}}(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})$
+\item Partially rational agents anticipate that a given initial debt has to be repaid, but only partly capture future deficits
+\item The modified IS curve:
+
+\end{itemize}
+	$$x_{t}=\textcolor{red}{b_{d}d_{t}}+\textcolor{red}{M}E_{t}[x_{t+1}]-\sigma(i_{t}-E_{t}\pi_{t+1}-r_{t}^{n})$$
+\begin{itemize}
+ \item $b_{d}=\frac {r\textcolor{red}{m_{y}}}{R-\textcolor{red}{m_{y}}r}\frac {R(1-\textcolor{red}{\bar m})}{R-\textcolor{red}{\bar m}}$ is the sensitivity to budget deficits
+ \item Tax cuts do have an impact!
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Behavorial Phillips Curve}
+\begin{itemize}
+\item Phillips curve with partially rational firms:
+\end{itemize}
+	$$\pi_{t}=\beta \textcolor{red}{M^{f}}E_{t}[\pi_{t+1}]+\kappa x_{t}$$
+\begin{itemize}
+\item With $M^{f}:=\textcolor{red}{\bar m}[\theta+(1-\theta)\frac{1-\beta \theta}{1-\beta \theta \textcolor{red}{\bar m}}\textcolor{red}{m^{f}}]$ and $\kappa=\bar \kappa \textcolor{red}{m^{f}}$, where $\theta$ is price stickiness and $\textcolor{red}{m^{f}}$ inattention to future markup innovations
+\item Firms are more forward-looking ($\beta \textcolor{red}{ M^{f}}$ higher) for higher price stickiness ($\theta$ higher) 
+\item Also, they pay more attention to future macro outcomes ($\textcolor{red}{m^{f}}$),  because ``they simply have to'' (Gabaix 2016, p. 19)
+\item Myopia seems to be less of a problems for firms
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Empirical Evidence}
+\begin{itemize}
+\item Gal\'{i} and Gertler (1999) find, with a $\beta \simeq$ 0,95, that a $\beta M^{f}\simeq$ 0.75 is necessary, which leads to an $M^{f}\simeq$ 0.8
+\item A $\theta$ = 0.2 (80\% of firms can reset their prices after a year) would then lead to an ${m^{f}}$ = 0.75
+\item Johnson et al. (2006) show that tax rebates have a substantial effect on aggregate consumption demand
+\item Ricardian equivalence doesn't seem to hold empirically, which implies $b^{d}$ is in fact greater that zero  
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+
+\frametitle{Empirical Evidence}
+\includegraphics[scale=0.5]{m}
+
+
+\end{frame}
+
+%------------------------------------------------
+
+\end{document} 
