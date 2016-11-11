@@ -168,12 +168,13 @@
 \begin{frame}
 	\frametitle{Five Major Implications}
 	\begin{enumerate}
+	\setcounter{enumi}{3}
 		\item \textbf{\underline{Zero Lower Bound}}: Depressions can be \textit{\textbf{``unboundedly large''}} in the traditional model
 		\begin{itemize}
 			\item Gabaix's model seems more in line with empirical data
 		\end{itemize}
 		\vspace{15pt}
-		\item \textbf{\underline{Equilibrium Selection}}: The NK Model offers a continuum of possible equilibria, \textit{\textbf{one well-defined}} equilibrium.
+		\item \textbf{\underline{Equilibrium Selection}}: The NK Model offers a continuum of possible equilibria, to be selected from.
 		\begin{itemize}
 			\item The Behavioral Model is \textit{\textbf{deterministic}}.
 		\end{itemize}
@@ -194,9 +195,9 @@
 	\begin{itemize}
 		\item True income: $y_{1}=y_{1}^{d}+\hat y_{1}$
 		\item Perceived income with myopia:
-	 $y_{1}^{s}=y_{1}^{d}+\textcolor{red}{\bar m}\hat y_{1}$
+	 $y_{1}^{s}=y_{1}^{d}+\textcolor{red}{\bar m}\hat y_{1}$, $\bar m \in [0, 1]$
 		\vspace{10pt}
-		\item $\hat y_{1}=T$ (Lump-Sum Transfer)
+		\item $\hat y_{1}$: Income deviation (e.g. Transfer) 
 	\end{itemize}	
 \end{frame}
 
@@ -208,7 +209,7 @@
 		\item Classic intertemporal consumption decision:\\
 		\vspace{8pt}
 		\begin{center}
-			$C_{0}=b(C{0}+\frac {C_{1}}{R_{0}})$
+			$C_{0}=b(C_{0}+\frac {C_{1}}{R_{0}})$
 		\end{center}
 		\vspace{8pt}
 		\item Myopic consumption with government deficit:\\
@@ -240,7 +241,7 @@
 			\item $\frac{\delta Y_{0}}{\delta G_{0}}=1+\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
 			\vspace{10pt}
 	\end{itemize}
-	If we think of $\frac{b}{1-b}$ as a ``mulitplier'', we see a more than one-to-one increase in outcome due to government spending!
+	If we think of $\frac{b}{1-b}$ as a ``mulitplier'', we see a more than one-to-one increase in output due to government spending!
 \end{frame}
 
 %---------------------------------------------------
@@ -303,8 +304,8 @@
 \begin{frame}
 	\frametitle{The Behavioral IS curve and Fiscal Policy}
 	\begin{itemize}
-		\item Transfers ($\Gamma$) and government debt ($B$), but no government consumption: budget deficit is $d_ {t}=\Gamma_{t}+rB_{t}$
-		\item Iteration gives that $subjective$ expectation of $\Gamma$ at time $\tau$ is $E_{t}^{s}[\Gamma_{\tau}]=-\underbrace{\frac {r}{R}B_{t}}_\text{current deficit}+\textcolor{red}{m_{y}\bar m^{\tau-t}}\underbrace{(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})}_\text{future deficit}$
+		\item Transfers ($T$) and government debt ($B$), but no government consumption: budget deficit is $d_ {t}=T_{t}+rB_{t}$
+		\item Iteration gives that $subjective$ expectation of $T$ at time $\tau$ is $E_{t}^{s}[T_{\tau}]=-\underbrace{\frac {r}{R}B_{t}}_\text{current deficit}+\textcolor{red}{m_{y}\bar m^{\tau-t}}\underbrace{(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})}_\text{future deficit}$
 		\item Partially rational agents anticipate that a given initial debt has to be repaid, but only partly capture future deficits
 		\item The modified IS curve:
 
@@ -336,7 +337,7 @@
 \begin{frame}
 \frametitle{Empirical Evidence}
 \begin{itemize}
-\item Gal\'{i} and Gertler (1999) find, with a $\beta \simeq$ 0,95, that a $\beta M^{f}\simeq$ 0.75 is necessary, which leads to an $M^{f}\simeq$ 0.8
+\item Gal\'{i} and Gertler (1999) find, with a $\beta \simeq$ of $0.95$, that a $\beta M^{f}\simeq$ of $0.75$ is necessary, which leads to an $M^{f}\simeq$ of $0.8$
 \item A $\theta$ = 0.2 (80\% of firms can reset their prices after a year) would then lead to an ${m^{f}}$ = 0.75
 \item Johnson et al. (2006) show that tax rebates have a substantial effect on aggregate consumption demand
 \item Ricardian equivalence doesn't seem to hold empirically, which implies $b^{d}$ is in fact greater that zero  
@@ -514,11 +515,9 @@
 
 \begin{frame}
 	\frametitle{In a nutshell...}
-	\begin{center}
-		``In conclusion, we have a model with quite systematic microfoundations, empirical support in its non-standard features, that is also simple to use.'' (Gabaix, p.34)\\
-		\vspace{10pt}
-		``Gabaix offers a fundamental change of the basic story of monetary economic. A discrete and large amount of irrationality lies at the core of the basic sign, stability, and mechanism of monetary policy.'' (Cochrane, p. 23)
-	\end{center}
+	``In conclusion, we have a model with quite systematic microfoundations, empirical support in its non-standard features, that is also simple to use.'' (Gabaix, p.34)\\
+	\vspace{10pt}
+	``Gabaix offers a fundamental change of the basic story of monetary economics. A discrete and large amount of irrationality lies at the core of the basic sign, stability, and mechanism of monetary policy.'' (Cochrane, p. 23)
 \end{frame}
 
 %--------------------------------------------------
