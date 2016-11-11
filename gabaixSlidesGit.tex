@@ -142,8 +142,8 @@
 \frametitle{The Behavioral Agent: Rational vs. Behavioral Consumption}
 \begin{itemize}
 \item Gabaix's derivation of the IS and Phillips curve starts with the individual consumption function $c_{t}=c_{t}^{d}+\hat c_{t}$
-\item  $\hat c_{t}$, the deviation from default consumption $c_{t}^{d}$, is where agent's (ir)rationality comes into play
-\item There are different myopia parameters: $\bar m$ is a general "cognition discounting" parameter, $m_{r}$ and $m_{y}$ allow for agents beeing partly inattentive to innovations in $r$ or $y$
+\item  Income innovation $\hat c_{t}$, as opposed to default consumption $c_{t}^{d}$, is where agent's (ir)rationality comes into play
+\item There are different myopia parameters: $\bar m$ is a general "cognition discounting" parameter, $m_{r}$ and $m_{y}$ allow for agents beeing partly inattentive to innovations in $r$ or $y$ (all $\in$ [0,1])
 
 \end{itemize}.
 
@@ -202,7 +202,7 @@
 \frametitle{The Behavioral IS curve and Fiscal Policy}
 \begin{itemize}
 \item Transfers ($\Gamma$) and government debt ($B$), but no government consumption: budget deficit is $d_ {t}=\Gamma_{t}+rB_{t}$
-\item Iteration gives that $subjective$ expectation of $\Gamma$ at time $\tau$ is $E_{t}^{s}[\Gamma_{\tau}]=-\frac {r}{R}B_{t}+\textcolor{red}{m_{y}\bar m^{\tau-t}}(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})$
+\item Iteration gives that $subjective$ expectation of $\Gamma$ at time $\tau$ is $E_{t}^{s}[\Gamma_{\tau}]=-\underbrace{\frac {r}{R}B_{t}}_\text{current deficit}+\textcolor{red}{m_{y}\bar m^{\tau-t}}\underbrace{(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})}_\text{future deficit}$
 \item Partially rational agents anticipate that a given initial debt has to be repaid, but only partly capture future deficits
 \item The modified IS curve:
 
@@ -225,8 +225,7 @@
 \begin{itemize}
 \item With $M^{f}:=\textcolor{red}{\bar m}[\theta+(1-\theta)\frac{1-\beta \theta}{1-\beta \theta \textcolor{red}{\bar m}}\textcolor{red}{m^{f}}]$ and $\kappa=\bar \kappa \textcolor{red}{m^{f}}$, where $\theta$ is price stickiness and $\textcolor{red}{m^{f}}$ inattention to future markup innovations
 \item Firms are more forward-looking ($\beta \textcolor{red}{ M^{f}}$ higher) for higher price stickiness ($\theta$ higher) 
-\item Also, they pay more attention to future macro outcomes ($\textcolor{red}{m^{f}}$),  because ``they simply have to'' (Gabaix 2016, p. 19)
-\item Myopia seems to be less of a problems for firms
+\item Myopia seems to be less of a problems for firms, as they pay more attention to future macro outcomes ($\textcolor{red}{m^{f}}$),  because ``they simply have to'' (Gabaix 2016, p. 19)
 \end{itemize}
 \end{frame}
 
