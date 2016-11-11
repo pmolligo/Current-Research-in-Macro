@@ -102,6 +102,8 @@
 \titlepage % Print the title page as the first slide
 \end{frame}
 
+%---------------------------------------------------------------------
+
 \begin{frame}
 \frametitle{Overview} % Table of contents slide, comment this block out to remove it
 \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
@@ -121,66 +123,166 @@
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Title?}
-\begin{itemize}
-\item $C_{0}=b(C{0}+\frac {C_{1}}{R_{0}})$
-\item true income: $y_{1}=y_{1}^{d}+\hat y_{1}$
-\item perceived income with myopia: $y_{1}^{s}=y_{1}^{d}+\textcolor{red}{\bar m}\hat y_{1}$
-\item $C_{0}=\frac {b}{1-b}((1- \textcolor{red}{\bar m})d_{0}+\frac {Y_{1}}{R_{0}})$
-\item $\frac{\delta Y_{0}}{\delta \Gamma_{0}}=\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
-\item $\frac{\delta Y_{0}}{\delta G_{0}}=1+\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
-\item $\frac{b}{1-b}$: multiplier
-\item $\hat y_{1}=\Gamma$ (i.e. tax)
-\item $d_{0}$: deficit
-\end{itemize}
-
+	\frametitle{Introduction}
+	\begin{itemize}
+		\item Preliminary paper by French economist \textit{\textbf{Xavier Gabaix}} which is likely to have a big impact on macroeconomic research
+		\vspace{8pt}
+		\item Attempts to tackle some of the \textit{\textbf{puzzling ``aggregate outcomes''}} of the traditional New Keynesian model
+		\vspace{8pt}
+		\item Addition of a new \textit{\textbf{parameter ``M"}} representing myopia of economic agents. Large consequences for monetary and fiscal policy!
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{The Behavioral Agent: Rational vs. Behavioral Consumption}
-\begin{itemize}
-\item Gabaix's derivation of the IS and Phillips curve starts with the individual consumption function $c_{t}=c_{t}^{d}+\hat c_{t}$
-\item  $\hat c_{t}$, the deviation from default consumption $c_{t}^{d}$, is where agent's (ir)rationality comes into play
-\item There are different myopia parameters: $\bar m$ is a general "cognition discounting" parameter, $m_{r}$ and $m_{y}$ allow for agents beeing partly inattentive to innovations in $r$ or $y$
-
-\end{itemize}.
-
+	\frametitle{What is Myopia?}
+	\begin{itemize}
+		\item General term used for \textbf{short-sightedness}
+		\vspace{8pt}
+		\item Economic context: synonymous with \textit{\textbf{``bounded rationality''}}, referring to agents' lack of attention paid to the future 
+		\vspace{8pt}
+		\item Most researchers follow a so-called ``cult of \textit{\textbf{perfect rationality}}'' (Smith 2016)
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{The Behavioral Agent: Rational vs. Behavioral Consumption}
-\begin{itemize}
-\item $\hat c_{t}$ is the agent's $rational$ expectation 
+	\frametitle{Five Major Implications}
+	\begin{enumerate}
+		\item \textbf{\underline{Forward Guidance Puzzle}}: In traditional model, agents ``unflinchingly respect'' their Euler equations, so FG is unrealistically powerful.
+			\begin{itemize}
+				\item Gabaix's approach solves this puzzle
+			\end{itemize}
+		\vspace{15pt}
+		\item \textbf{\underline{Fiscal Policy}}: Traditionally Ricardian Equivalence holds in the NK Model, so tax cuts have \textit{\textbf{no effect}} on consumption.
+			\begin{itemize}
+				\item If agents are myopic, fiscal policy is much more effective.
+			\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Five Major Implications}
+	\begin{enumerate}
+		\item \textbf{\underline{Zero Lower Bound}}: Depressions can be \textit{\textbf{``unboundedly large''}} in the traditional model
+		\begin{itemize}
+			\item Gabaix's model seems more in line with empirical data
+		\end{itemize}
+		\vspace{15pt}
+		\item \textbf{\underline{Equilibrium Selection}}: The NK Model offers a continuum of possible equilibria, \textit{\textbf{one well-defined}} equilibrium.
+		\begin{itemize}
+			\item The Behavioral Model is \textit{\textbf{deterministic}}.
+		\end{itemize}
+		\vspace{8pt}
+		\item \underline{\textbf{Neo-Fisherian Paradox}}: In the traditional NK model a rise in interest rates leads to a smooth rise in \textit{\textbf{short and long-run}} inflation.
+		\begin{itemize}
+			\item Gabaix's model is Keynesian in the short-run and Fisherian (money-neutral) in the long run.
+		\end{itemize} 
+	\end{enumerate}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Myopia in a 2-Period Model}
+	Agents start with ``default'' income and experience an additional deviation (e.g. Transfer):
+\vspace{8pt}
+	\begin{itemize}
+		\item True income: $y_{1}=y_{1}^{d}+\hat y_{1}$
+		\item Perceived income with myopia:
+	 $y_{1}^{s}=y_{1}^{d}+\textcolor{red}{\bar m}\hat y_{1}$
+		\vspace{10pt}
+		\item $\hat y_{1}=T$ (Lump-Sum Transfer)
+	\end{itemize}	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Myopia in a 2-Period Model}
+	\begin{itemize}
+		\item Classic intertemporal consumption decision:\\
+		\vspace{8pt}
+		\begin{center}
+			$C_{0}=b(C{0}+\frac {C_{1}}{R_{0}})$
+		\end{center}
+		\vspace{8pt}
+		\item Myopic consumption with government deficit:\\
+		\vspace{8pt}
+		\begin{center}
+			$C_{0}=\frac {b}{1-b}((1- \textcolor{red}{\bar m})d_{0}+\frac {Y_{1}}{R_{0}})$
+	\end{center}
+	\end{itemize}
+	\vspace{8pt}
+	\begin{itemize}
+		\item $b$: Marginal Propensity to Consume
+		\item $d_{0}$: Deficit
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------
+
+\begin{frame}
+\frametitle{Myopia in a 2-Period Model}
+	How does aggregate income (consumption) change with a lump-sum transfer?
+	\vspace{8pt}
+	\begin{itemize}
+			\item $\frac{\delta Y_{0}}{\delta T_{0}}=\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
+	\end{itemize}
+	\vspace{8pt}
+	And with increased government expenditure?
+	\vspace{8pt}
+	\begin{itemize}
+			\item $\frac{\delta Y_{0}}{\delta G_{0}}=1+\frac{b}{1-b}(1-\textcolor{red}{\bar m})$
+			\vspace{10pt}
+	\end{itemize}
+	If we think of $\frac{b}{1-b}$ as a ``mulitplier'', we see a more than one-to-one increase in outcome due to government spending!
+\end{frame}
+
+%---------------------------------------------------
+
+\begin{frame}
+	\frametitle{The Behavioral Agent: Rational vs. Behavioral Consumption}
+	\begin{itemize}
+		\item Gabaix's derivation of the IS and Phillips curve starts with the individual consumption function $c_{t}=c_{t}^{d}+\hat c_{t}$
+		\item  Income innovation $\hat c_{t}$, as opposed to default consumption $c_{t}^{d}$, is where agent's (ir)rationality comes into play
+		\item There are different myopia parameters: $\bar m$ is a general "cognition discounting" parameter, $m_{r}$ and $m_{y}$ allow for agents beeing partly inattentive to innovations in $r$ or $y$ (all $\in$ [0,1])
+	\end{itemize}.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{The Behavioral Agent: Rational vs. Behavioral Consumption}
+	\begin{itemize}
+		\item $\hat c_{t}$ is the agent's $rational$ expectation 
 
 		$$\hat c_{t}=E_{t}[\sum_{\tau \geq t}\frac{1}{R^{\tau-t}}(b_{r}(k_{r})\hat r_{\tau}+b_{y}\hat y_{\tau})]+O(||x||^2)$$
-\item  $b_{r}(k_{t}):=\frac {\frac {r}{R}k_{t}-\frac {1}{\gamma}c^{d}}{R^{2}}$ and $b_{y}:=\frac {r}{R}$ are the sensitivities of consumption to an increase in $r$ or $y$
-
-\item With myopic agents, expectation is $subjective$ as $\bar m$, $m_{r}$ and $m_{y}$  $<$ 1: $$\hat c_{t}=E_{t}^{\textcolor{red}{s}}[\sum_{\tau \geq t}\frac{\textcolor{red}{\bar m^{\tau-t}}}{R^{\tau-t}}(b_{r}(k_{r})\textcolor{red}{m_{r}}\hat r_{\tau}+b_{y}\textcolor{red}{m_{y}}\hat y_{\tau})]+O(||x||^2)$$
-
-\end{itemize}.
-
+		\item  $b_{r}(k_{t}):=\frac {\frac {r}{R}k_{t}-\frac {1}{\gamma}c^{d}}{R^{2}}$ and $b_{y}:=\frac {r}{R}$ are the sensitivities of consumption to an increase in $r$ or $y$
+		\item With myopic agents, expectation is $subjective$ as $\bar m$, $m_{r}$ and $m_{y}$  $<$ 1: $$\hat c_{t}=E_{t}^{\textcolor{red}{s}}[\sum_{\tau \geq t}\frac{\textcolor{red}{\bar m^{\tau-t}}}{R^{\tau-t}}(b_{r}(k_{r})\textcolor{red}{m_{r}}\hat r_{\tau}+b_{y}\textcolor{red}{m_{y}}\hat y_{\tau})]+O(||x||^2)$$
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{The Behavioral IS Curve}
-\begin{itemize}
-\item From individual consumption function to aggregate demand: in a New Keynesian world without capital, $\hat y_{\tau}=\hat c_{\tau}$ and $x_{\tau}=\frac {\hat y_{\tau}}{c^{d}}$, which gives
+	\frametitle{The Behavioral IS Curve}
+	\begin{itemize}
+		\item From individual consumption function to aggregate demand: in a New Keynesian world without capital, $\hat y_{\tau}=\hat c_{\tau}$ and $x_{\tau}=\frac {\hat y_{\tau}}{c^{d}}$, which gives
 	$$x_{t}=E_{t}[\sum_{\tau \geq t}\frac{\bar m^{\tau-t}}{R^{\tau-t}}(b_{y}m_{y}x_{\tau}+\tilde{b_{r}}\hat r_{\tau})]$$
-\item Gabaix uses $M:=\frac{\textcolor{red}{\bar m}}{R-r\textcolor{red}{m_{y}}}\in [0,1]$ (attention parameter) and $\sigma:=\frac{\textcolor{red}{m_{r}}}{\gamma R(R-r\textcolor{red}{m_{y}})}$ (governs reactions of $x_{t}$ to changes in $\hat r{t}$)
-\item After some steps, he arrives at
-\end{itemize}
+		\item Gabaix uses $M:=\frac{\textcolor{red}{\bar m}}{R-r\textcolor{red}{m_{y}}}\in [0,1]$ (attention parameter) and $\sigma:=\frac{\textcolor{red}{m_{r}}}{\gamma R(R-r\textcolor{red}{m_{y}})}$ (governs reactions of $x_{t}$ to changes in $\hat r{t}$)
+		\item After some steps, he arrives at
+	\end{itemize}
 
 	$$x_{t}=\textcolor{red}{M}E_{t}[x_{t+1}]-\sigma(\underbrace{i_{t}-E_{t}\pi_{t+1}-r_{t}^{n}}_\text{$\hat r_{t}$})$$
 
-\begin{itemize}
-\item If agents are perfectly rational and $M=1$, we have the traditional IS curve
-\end{itemize}
+	\begin{itemize}
+		\item If agents are perfectly rational and $M=1$, we have the traditional IS curve
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
@@ -199,19 +301,19 @@
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{The Behavioral IS curve and Fiscal Policy}
-\begin{itemize}
-\item Transfers ($\Gamma$) and government debt ($B$), but no government consumption: budget deficit is $d_ {t}=\Gamma_{t}+rB_{t}$
-\item Iteration gives that $subjective$ expectation of $\Gamma$ at time $\tau$ is $E_{t}^{s}[\Gamma_{\tau}]=-\frac {r}{R}B_{t}+\textcolor{red}{m_{y}\bar m^{\tau-t}}(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})$
-\item Partially rational agents anticipate that a given initial debt has to be repaid, but only partly capture future deficits
-\item The modified IS curve:
+	\frametitle{The Behavioral IS curve and Fiscal Policy}
+	\begin{itemize}
+		\item Transfers ($\Gamma$) and government debt ($B$), but no government consumption: budget deficit is $d_ {t}=\Gamma_{t}+rB_{t}$
+		\item Iteration gives that $subjective$ expectation of $\Gamma$ at time $\tau$ is $E_{t}^{s}[\Gamma_{\tau}]=-\underbrace{\frac {r}{R}B_{t}}_\text{current deficit}+\textcolor{red}{m_{y}\bar m^{\tau-t}}\underbrace{(d_{\tau}-r \sum_{u=t}^{\tau-1}d_{u})}_\text{future deficit}$
+		\item Partially rational agents anticipate that a given initial debt has to be repaid, but only partly capture future deficits
+		\item The modified IS curve:
 
-\end{itemize}
+	\end{itemize}
 	$$x_{t}=\textcolor{red}{b_{d}d_{t}}+\textcolor{red}{M}E_{t}[x_{t+1}]-\sigma(i_{t}-E_{t}\pi_{t+1}-r_{t}^{n})$$
-\begin{itemize}
- \item $b_{d}=\frac {r\textcolor{red}{m_{y}}}{R-\textcolor{red}{m_{y}}r}\frac {R(1-\textcolor{red}{\bar m})}{R-\textcolor{red}{\bar m}}$ is the sensitivity to budget deficits
- \item Tax cuts do have an impact!
-\end{itemize}
+	\begin{itemize}
+		 \item $b_{d}=\frac {r\textcolor{red}{m_{y}}}{R-\textcolor{red}{m_{y}}r}\frac {R(1-\textcolor{red}{\bar m})}{R-\textcolor{red}{\bar m}}$ is the sensitivity to budget deficits
+		 \item Tax cuts do have an impact!
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
@@ -225,8 +327,7 @@
 \begin{itemize}
 \item With $M^{f}:=\textcolor{red}{\bar m}[\theta+(1-\theta)\frac{1-\beta \theta}{1-\beta \theta \textcolor{red}{\bar m}}\textcolor{red}{m^{f}}]$ and $\kappa=\bar \kappa \textcolor{red}{m^{f}}$, where $\theta$ is price stickiness and $\textcolor{red}{m^{f}}$ inattention to future markup innovations
 \item Firms are more forward-looking ($\beta \textcolor{red}{ M^{f}}$ higher) for higher price stickiness ($\theta$ higher) 
-\item Also, they pay more attention to future macro outcomes ($\textcolor{red}{m^{f}}$),  because ``they simply have to'' (Gabaix 2016, p. 19)
-\item Myopia seems to be less of a problems for firms
+\item Myopia seems to be less of a problems for firms, as they pay more attention to future macro outcomes ($\textcolor{red}{m^{f}}$),  because ``they simply have to'' (Gabaix 2016, p. 19)
 \end{itemize}
 \end{frame}
 
@@ -245,147 +346,187 @@
 %------------------------------------------------
 
 \begin{frame}
- \frametitle{The Big Picture}
+	\frametitle{The Big Picture}
+	\begin{columns}[c] 
+	\column{.5\textwidth}
+	\textbf{Traditional NK}
+	\begin{itemize}
+		\item Announcement of $future$ rate change matters today
+		\item ``Unboundedly'' costly ZLB
+		\item Multiple Equilibria
+		\item Elusive Keynesian short-run deflation
+	\end{itemize}
 
-\begin{columns}[c] 
-
-\column{.5\textwidth}
-\textbf{Traditional NK}
- \begin{itemize}
- \item Announcement of $future$ rate change matters today
- \item “Unboundedly” costly ZLB
- \item Multiple Equilibria
- \item Elusive Keynesian short-run deflation
-\end{itemize}
-
-\column{.5\textwidth}
-\textbf{Behavioral NK}
- \begin{itemize}
- \item $Initial$ conditions have large impact today
- \item Less costly ZLB
- \item Single Equilibrium
- \item Keynesian short-run, Fisher long-run
-\end{itemize}
-\end{columns}
+	\column{.5\textwidth}
+	\textbf{Behavioral NK}
+	 \begin{itemize}
+		\item $Initial$ conditions have large impact today
+		\item Less costly ZLB
+		\item Single Equilibrium
+		\item Keynesian short-run, Fisher long-run
+	\end{itemize}
+	\end{columns}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Forward Guidance Puzzle}
-\begin{itemize}
-\item The further in the future the CB announces rate cut, the less inflation $today$ is impacted:
-\end{itemize}
-\includegraphics[scale=0.4]{inflation}
-%{\footnotesize Source: Gabaix (2016), pp. 23}
+	\frametitle{Forward Guidance Puzzle}
+	\begin{itemize}
+		\item The further in the future the CB announces rate cut, the less inflation \textit{\textbf{today}} is impacted in Gabaix's model:
+	\end{itemize}
+	\includegraphics[scale=0.4]{fg}
+	{\footnotesize Source: Gabaix (2016), p. 23}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Less Costly ZLB}
-\includegraphics[scale=0.4]{outputgap}
-%{\footnotesize Source: Gabaix (2016), pp. 23}
- \end{frame}
+	\frametitle{Less Costly ZLB}
+	\begin{itemize}
+		\item There is a \textit{\textbf{bound}} to recessions at the ZLB
+		\begin{figure}[h]
+			\includegraphics[scale=0.35]{zlb}
+		\end{figure}
+	\end{itemize}	
+	{\footnotesize Source: Gabaix (2016), p. 23}
+\end{frame}
  
  %------------------------------------------------
 
 \begin{frame}
-\frametitle{Less Costly ZLB}
-\includegraphics[scale=0.5]{jap}
-\begin{itemize}
-\item ZLB in Japan since the 1990s is only “boundedly” costly
-\end{itemize}
+	\frametitle{Less Costly ZLB}
+	\begin{itemize}
+		\item ZLB in Japan since the 1990s is only ``boundedly'' costly
+		\begin{figure}[h]
+			\includegraphics[scale=0.5]{jap}
+		\end{figure}
+	\end{itemize}
+	{\footnotesize Source: Bank of Japan (2016)}
+\end{frame}
+
+ %------------------------------------------------
+ 
+\begin{frame}
+	\frametitle{Deterministic Model}
+	\begin{itemize}
+		\item Recall the Taylor Rule: $\hat{R}_{t}=\Phi_{\pi}\hat{\Pi}_{t}+\Phi_{x}x_{t}+\epsilon_{t}$
+		\vspace{8pt}
+		\begin{itemize}
+			\item $\Phi_{\pi} > 1$ would indicate an \textit{\textbf{active}} monetary policy
+			\item At the ZLB, this cannot be implemented
+		\end{itemize}
+		\vspace{8pt}
+		\item $M < 1$ makes up for this issue
+		\item ``Sunspot'' Equilibria in traditional model are replaced by a single, stable equilibrium in the behavioral model
+	\end{itemize}
+\end{frame}
+
+ %------------------------------------------------
+ 
+\begin{frame}
+	\frametitle{Sunspot Equilibria}
+	\begin{itemize}
+		\item $i = 0$, $\phi = 1$, $M = 1$
+		\item More than one stable path looking forward
+	\end{itemize}
+	\begin{figure}[h]
+		\includegraphics[scale=0.4]{nk}
+	\end{figure}
+	{\footnotesize Source: Cochrane (2016), p. 9}
 \end{frame}
 
  %------------------------------------------------
  
  \begin{frame}
-\frametitle{Deterministic Model}
-\begin{itemize}
-\item Taylor Rule: $\hat{R}_{t}=\Phi_{\pi}\hat{\Pi}_{t}+\Phi_{x}x_{t}+\epsilon_{t}$
-\item $M$ $<$ 1 instead of $\phi$ $>$ 1 due to ZLB
-\item “Restore determinacy under passive monetary policy” (Cochrane, pp. 6)
-\item “Sunspot” Equilibria in traditional model
-\end{itemize}
-\end{frame}
-
+ 	\frametitle{One Stable Path}
+ 	\begin{itemize}
+ 		\item $i = 0$, $\phi = 1$, $M < 1$
+ 		\item Explosive inflation on all but one path
+ 	\end{itemize}
+ 	\begin{figure}[h]
+ 		\includegraphics[scale=0.4]{gab}
+ 	\end{figure}
+ 	{\footnotesize Source: Cochrane (2016), p. 9}
+ \end{frame}
+ 
  %------------------------------------------------
  
 \begin{frame}
-\frametitle{Deterministic Model and Forward Guidance}
-\begin{itemize}
-\item $i$ = 0,$ M$ = 1, $\phi$ = 1
-\item More than one stable path
-\end{itemize}
-\includegraphics[scale=0.5]{nk}
-%{\footnotesize Source: Gabaix (2016), pp. 9}
-\end{frame}
-
- %------------------------------------------------
- 
-\begin{frame}
-\frametitle{Fisher and Keynes}
-\begin{itemize}
-\item Inflation and Output after a temporary increase in the nominal interest rate:
-\end{itemize}
-\includegraphics[scale=0.5]{fish}
-%{\footnotesize Source: Gabaix (2016), pp. 33}
+	\frametitle{Fisher and Keynes}
+	\begin{itemize}
+		\item Inflation and output after a temporary increase in the nominal interest rate:
+	\end{itemize}
+	\begin{figure}[h]
+	\includegraphics[scale=0.5]{fish}
+	\end{figure}
+	{\footnotesize Source: Gabaix (2016), p. 33}
 \end{frame}
 
  %------------------------------------------------
 
 \begin{frame}
-\frametitle{Cochrane Critique}
-\begin{itemize}
-\item Undoubtedly an important paper
-\item Main contribution: replace active monetary policy (impossible at ZLB) with behavioral parameter
-\item $M$ $<$ 1 instead of $\phi$ $>$ 0
-\item “Too important to be true” (Cochrane, pp. 15)
-\item Poor and unnecessary (?) behavioral foundations
-\item Alternative models to Gabaix (Cochrane 2016b)
-\end{itemize}
+	\frametitle{Cochrane Critique}
+	\begin{itemize}
+		\item Undoubtedly an important paper
+		\item Main contribution: replace active monetary policy (impossible at ZLB) with behavioral parameter
+		\item ``Too important to be true'' (Cochrane, p. 15)
+	\end{itemize}
 \end{frame}
 
  %------------------------------------------------
 
 \begin{frame}
-\frametitle{Cochrane Critique}
-\begin{itemize}
-\item Rather than assuming rationality and accepting irrational influence, Gabaix assumes irrationality 
-\item If people become more rational or prices become flexible, problems might emerge
-\item Why? Price flexibility demands more irrationality to achieve deterministic result
-\item Can the behavioral foundations be taken seriously?
-\end{itemize}
+	\frametitle{Cochrane Critique}
+	\begin{itemize}
+		\item Rather than assuming rationality and accepting irrational influence, Gabaix assumes irrationality 
+		\item If people become more rational or prices become flexible, problems might emerge
+		\item Why? Price flexibility demands more irrationality to achieve deterministic result
+		\item Can the behavioral foundations be taken seriously?
+	\end{itemize}
 \end{frame}
 
  %------------------------------------------------
 
 \begin{frame}
-\frametitle{Cochrane Critique}
-\begin{itemize}
-\item Model in reduced form
-\end{itemize}
+	\frametitle{Cochrane Critique}
+	\begin{itemize}
+		\item Condition that ensures both eigenvalues of the reduced form model are less than 1:
+		\begin{center}
+			$$\frac{(1 - \beta M^{f})(1 - M)}{\kappa\sigma} < 1$$
+		\end{center}
+		\vspace{8pt}
+		\item We see a trade-off between price flexibility ($\kappa$) and rationality
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-
-\frametitle{Cochrane Critique}
-\includegraphics[scale=0.5]{m}
-
+	\frametitle{Cochrane Critique}
+	\begin{figure}[h]
+		\includegraphics[scale=0.5]{coch}
+	\end{figure}
+	{\footnotesize Source: Cochrane (2016), p. 15}
 \end{frame}
 
- %------------------------------------------------
+%------------------------------------------------
 
 \begin{frame}
-\frametitle{In a nutshell}
-\begin{itemize}
-\item “In conclusion, we have a model with quite systematic microfoundations, empirical support in its non-standard features, that is also simple to use.” (Gabaix, pp.34) 
-\item “Gabaix offers a fundamental change of the basic story of monetary economics…A discrete and large amount of irrationality lies at the core of the basic sign, stability, and mechanism of monetary policy.” (Cochrane, pp. 23)
-\end{itemize}
+	\frametitle{In a nutshell...}
+	\begin{center}
+		``In conclusion, we have a model with quite systematic microfoundations, empirical support in its non-standard features, that is also simple to use.'' (Gabaix, p.34)
+		\vspace{10pt}
+		``Gabaix offers a fundamental change of the basic story of monetary economics…A discrete and large amount of irrationality lies at the core of the basic sign, stability, and mechanism of monetary policy.'' (Cochrane, p. 23)
+	\end{center}
 \end{frame}
 
+%--------------------------------------------------
+
+\begin{frame}
+	\frametitle{References}
+\end{frame}
+
+%------------------------------------------------
 
 \end{document} 
