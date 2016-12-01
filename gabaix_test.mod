@@ -1,4 +1,5 @@
 //preliminary model simulation (Gabaix)
+//based off of stoch simul code
 
 
 //Endogenous variables
