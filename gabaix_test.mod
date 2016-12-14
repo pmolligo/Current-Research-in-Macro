@@ -37,7 +37,7 @@ model;
 //Phillips curve
 #kap=(1-beta*xip)*(1-xip)/xip*(1+phi);
 //#mkap=(1/xip-1)*(1-beta*xip)*(gamma+phi)*mf;
-#Mf=mbar*(xip-(1-xip)*((1-beta*xip)/(1-beta*xip*mbar))*mf); // use xip instead of theta (gabaix)
+#Mf=mbar*(xip+(1-xip)*((1-beta*xip)/(1-beta*xip*mbar))*mf); // use xip instead of theta (gabaix)
 piV=Mf*beta*piV(+1)+kap*xV;  //insert Mf and new kappa   
                                  
 //IS equation
