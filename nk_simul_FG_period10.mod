@@ -16,30 +16,30 @@ eps epsR;
 
 //Parameters
 parameters 
-beta phi xip rpi rx rho sig my mr mbar mf gamma;
+beta phi xip rpi rx rho sig my mr mbar mf_x mf_pi gamma;
 
 
 //Inialization of parameter values
 beta  =0.99;  //Discount factor (=inverse nominal interest rate)
-phi   =0.2;   //Inverse labor supply elasticity
-xip   =0.75;  //Calvo parameter price stickiness
-rpi   =1.5;   //Taylor rule: feedback on expected inflation
-rx    =0.2;   //Taylor rule: feedback on output gap
-rho   =0.9;   //AR(1) natural rate
-sig   =.005*2; //Std natural rate
-my    =0.7;  //myopia about income innovations
-mr    =0.7; //myopia about int. rate innovations
-mbar  =0.7; //general inattention parameter 
-mf    =0.7; //firm myopia
-gamma =1; //relative risk aversion parameter
+phi   =1;   //Inverse labor supply elasticity
+xip   =0.7;  //Calvo parameter price stickiness
+rpi   =1.5;     //Taylor rule: feedback on expected inflation
+rx    =0.2;     //Taylor rule: feedback on output gap
+rho   =0.9;     //AR(1) natural rate
+my    =1;       //myopia about income innovations
+mr    =1;     //myopia about int. rate innovations
+mbar  =1;    //general inattention parameter 
+mf_pi =1;       //firm myopia to inflation
+mf_x  =1;     //firm myopia to output
+gamma =1;       //relative risk aversion parameter
 
 
 //model equations
 model;
 
 //Phillips curve
-#mkap=(1/xip-1)*(1-beta*xip)*(gamma+phi)*mf; // new definition of kappa with firm myopia
-#Mf=mbar*(xip+(1-xip)*((1-beta*xip)/(1-beta*xip*mbar))*mf); // use xip instead of theta (gabaix)
+#mkap=(1/xip-1)*(1-beta*xip)*(gamma+phi)*mf_x; // new definition of kappa with firm myopia
+#Mf=mbar*(xip+mf_pi*(1-xip)); // use xip instead of theta (gabaix)
 piV=Mf*beta*piV(+1)+mkap*xV; // behavioral phillips curve
 
 //#kap=(1-beta*xip)*(1-xip)/xip*(1+phi); //old definition of kappa
