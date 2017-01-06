@@ -11,7 +11,7 @@ eps epsR;
 
 //Parameters
 parameters 
-beta phi theta rho my mr mbar mf mf_pi mf_x gamma;
+beta phi theta rho my mr mbar mf_pi mf_x gamma;
 
 
 //Inialization of parameter values
