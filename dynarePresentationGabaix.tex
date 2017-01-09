@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[A Behavioral New Keynesian Model]{A Behavioral New Keynesian Model: \\Dynare Implementation} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author[Current Research in Macroeconomics]{Carlos Montoya, Patrick Molligo, and Clemens Stiewe } % Your name
+\institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+\\Current Research in Macroeconomics% Your institution for the title page
+\medskip
+\textit{} % Your email address
+}
+\date{January 14, 2017} % Date, can be changed to a custom date
+
+\begin{document}
+	
+\begin{frame}
+	\titlepage % Print the title page as the first slide
+\end{frame}
+
+%---------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+	\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%---------------------------------------------------------------------
+
+\section{Model Recap} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{The Forward Guidance Puzzle}
+\section{The Zero Lower-Bound}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Gabaix' Behavioral Approach}
+	\begin{itemize}
+		\item Attempts to tackle some of the \textit{\textbf{puzzling ``aggregate outcomes''}} of the traditional New Keynesian model
+		\vspace{8pt}
+		\item Addition of a new \textit{\textbf{parameter ``M"}} representing myopia of economic agents. Large consequences for monetary and fiscal policy!
+		\vspace{8pt}
+		\begin{itemize}
+			\item Myopia = "Short-sightedness" - agents can't see very far into the future
+		\end{itemize}
+		\item NEW VERSION
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Five Major Implications}
+	\begin{enumerate}
+		\item \textbf{\underline{Forward Guidance Puzzle}}: In traditional model, agents ``unflinchingly respect'' their Euler equations, so FG is unrealistically powerful.
+		\vspace{8pt}
+		\item \textbf{\underline{Fiscal Policy}}: Traditionally Ricardian Equivalence holds in the NK Model, so tax cuts have \textit{\textbf{no effect}} on consumption.
+		\vspace{8pt}
+		\item \textbf{\underline{Zero Lower Bound}}: Depressions can be \textit{\textbf{``unboundedly large''}} in the traditional model
+		\vspace{8pt}
+		\item \textbf{\underline{Equilibrium Selection}}: The NK Model offers a continuum of possible equilibria, to be selected from.
+		\vspace{8pt}
+		\item \underline{\textbf{Neo-Fisherian Paradox}}: In the traditional NK model a rise in interest rates leads to a smooth rise in \textit{\textbf{short and long-run}} inflation.
+	\end{enumerate}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Behavioral NK Model Synthesis}
+	\begin{itemize}
+		\item The Behavioral IS-Curve: $$x_{t}=\textcolor{red}{M}E_{t}[x_{t+1}]-\sigma(i_{t}-E_{t}\pi_{t+1}-r_{t}^{n})$$\\
+		\vspace{5pt}
+		\item The Behavioral Phillips Curve: $$\pi_{t}=\beta \textcolor{red}{M^{f}}E_{t}[\pi_{t+1}]+\kappa x_{t}$$
+		\item write new parameters and definitions/values
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Dynare Implementation}
+	\begin{itemize}
+		\item Focus on the Forward Guidance Puzzle and the Costliness of the ZLB
+		\vspace{8pt}
+		\item For each analysis, we looked at the effects of shocks across three cases:
+		\vspace{8pt}
+		\begin{enumerate}
+			\item Traditional Model ($M = 1$)
+			\item Household Myopia ($M < 1$ for individual households)
+			\item Household \& Firm Myopia ($M < 1$ for household and firms)
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Forward Guidance in Dynare}
+	\begin{itemize}
+		\item Gabaix uses a more general approach to Forward Guidance that is independent of the ZLB
+		\vspace{8pt}
+		\item He follows the approach used by McKay, Nakamura, and Steinsson in their 2016 research on the Euler Equation and Forward Guidance Puzzle:
+		\vspace{8pt}
+		\begin{itemize}
+			\item The central bank follows a ``naive'' interest rate rule WRITE MCKAY EQ
+			\item A one-time, $1\%$ rate cut is announced to take place several years in the future
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Forward Guidance in Dynare}
+	\begin{itemize}
+		\item figures
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{ZLB in Dynare}
+	\begin{itemize}
+		\item We implemented the ZLB using a large, negative technology shock in conjunction with the \texttt{max} operator in MATLAB
+		\vspace{8pt}
+		\item The same central bank policy rule from McKay, Nakamura, and Steinsson (2016) applies here as well
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{ZLB in Dynare}
+	\begin{itemize}
+		\item figures
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Final Thoughts}
+\end{frame}
+
+%--------------------------------------------------
+
+\begin{frame}
+	\frametitle{References}
+	\begin{flushleft}
+		\footnotesize
+		Bank of Japan (2016), ``Output Gap and Potential Growth Rate,'' Research Data, \url{https://www.boj.or.jp/en/research/research\_data/gap/gap.pdf}.\\
+		\vspace{7pt}
+		Gabaix, Xavier (2016), ``A Behavioral New Keynesian Model,'' Unpublished manuscript.\\
+		\vspace{7pt}
+		McKay, Alisdair, Emi Nakamura, and Jon Steinsson (2016a), ``The Power of Forward Guidance Revisited,'' \textit{American Economic Review}, 106 (10): 3133-3158.\\
+		\vspace{7pt}
+		McKay, Alisdair, Emi Nakamura, and Jon Steinsson (2016b), ``The Discounted Euler Equation: A Note,'' \textit{National Bureau of Economic Research}, Working Paper No. 22129.
+	\end{flushleft}
+\end{frame}
+
+%------------------------------------------------
+
+\end{document} 
