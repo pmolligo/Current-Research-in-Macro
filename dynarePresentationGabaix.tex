@@ -115,13 +115,18 @@
 
 \section{Model Recap} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 \section{The Forward Guidance Puzzle}
-\section{The Zero Lower-Bound}
+\section{The Zero Lower Bound}
 
 %------------------------------------------------
 
 \begin{frame}
 	\frametitle{Gabaix' Behavioral Approach}
 	\begin{itemize}
+		\item New version of the paper posted on December 26th
+		\begin{itemize}
+			\item Minor changes to the main model, mostly involving parameter specification
+		\end{itemize}
+		\vspace{8pt}
 		\item Attempts to tackle some of the \textit{\textbf{puzzling ``aggregate outcomes''}} of the traditional New Keynesian model
 		\vspace{8pt}
 		\item Addition of a new \textit{\textbf{parameter ``M"}} representing myopia of economic agents. Large consequences for monetary and fiscal policy!
@@ -129,7 +134,6 @@
 		\begin{itemize}
 			\item Myopia = "Short-sightedness" - agents can't see very far into the future
 		\end{itemize}
-		\item NEW VERSION
 	\end{itemize}
 \end{frame}
 
@@ -138,16 +142,31 @@
 \begin{frame}
 	\frametitle{Five Major Implications}
 	\begin{enumerate}
-		\item \textbf{\underline{Forward Guidance Puzzle}}: In traditional model, agents ``unflinchingly respect'' their Euler equations, so FG is unrealistically powerful.
+		\item \textbf{\underline{Forward Guidance Puzzle}}: In traditional model FG is unrealistically powerful.
 		\vspace{8pt}
-		\item \textbf{\underline{Fiscal Policy}}: Traditionally Ricardian Equivalence holds in the NK Model, so tax cuts have \textit{\textbf{no effect}} on consumption.
+		\item \textbf{\underline{Fiscal Policy}}: Traditionally Ricardian Equivalence holds, so lump-sum tax cuts have \textit{\textbf{no effect}} on consumption.
 		\vspace{8pt}
-		\item \textbf{\underline{Zero Lower Bound}}: Depressions can be \textit{\textbf{``unboundedly large''}} in the traditional model
+		\item \textbf{\underline{Zero Lower Bound}}: Recessions can be \textit{\textbf{``unboundedly large''}} in the traditional model
 		\vspace{8pt}
-		\item \textbf{\underline{Equilibrium Selection}}: The NK Model offers a continuum of possible equilibria, to be selected from.
+		\item \textbf{\underline{Equilibrium Selection}}: The NK Model offers a continuum of possible equilibria to be selected from.
 		\vspace{8pt}
-		\item \underline{\textbf{Neo-Fisherian Paradox}}: In the traditional NK model a rise in interest rates leads to a smooth rise in \textit{\textbf{short and long-run}} inflation.
+		\item \underline{\textbf{Neo-Fisherian Paradox}}: In the traditional NK model a rise in interest rates leads to a smooth rise in \textit{\textbf{short-run}} inflation.
 	\end{enumerate}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Five Major Implications}
+	\begin{itemize}
+		\item In his new version, Gabaix describes two additional implications of his model:
+		\vspace{8pt}
+		\begin{itemize}
+			\item Explains why economies at the ZLB can be stable
+			\item Qualitative changes in optimal policy when firms are behavioral
+		\end{itemize}
+		\vspace{8pt}
+		\item For today, we will focus on the implications of the model for \textbf{Forward Guidance} and the \textbf{Costliness of the Zero Lower Bound}
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
@@ -158,12 +177,52 @@
 		\item The Behavioral IS-Curve: $$x_{t}=\textcolor{red}{M}E_{t}[x_{t+1}]-\sigma(i_{t}-E_{t}\pi_{t+1}-r_{t}^{n})$$\\
 		\vspace{5pt}
 		\item The Behavioral Phillips Curve: $$\pi_{t}=\beta \textcolor{red}{M^{f}}E_{t}[\pi_{t+1}]+\kappa x_{t}$$
-		\item write new parameters and definitions/values
 	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
+\begin{frame}
+	\frametitle{Breakdown of `M'}
+	\begin{itemize}
+		\item There are three main behavioral parameters:\\ 
+		$$M=\frac{\bar{m}}{\frac{1}{\beta}-m_{y}(\frac{1}{\beta}-1)}$$\\
+		$$\sigma=\frac{m_{r}}{(\gamma\frac{1}{\beta}(\frac{1}{\beta}-(\frac{1}{\beta}-1)m_{y}))}$$\\
+		$$M^{f}=\bar{m}(\theta+m^{f}_{\pi}(1-\theta))$$\\
+		\vspace{5pt}
+		\item Kappa also has a behavioral component:\\ $$\kappa=(\frac{1}{\theta}-1)(1-\beta\theta)(\gamma+\phi)m^{f}_{x}$$
+		\item What about the other parameters $\bar{m}$, $m_{y}$, $m_{r}$, $m^{f}_{\pi}$, and $m^{f}_{x}$?\\ 	
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Parameterization}
+\begin{table}
+	\begin{tabular}{l l l}
+		\toprule
+		\textbf{Parameter} & \textbf{Traditional Model} & \textbf{Behavioral Model}\\
+		\midrule
+		$\bar{m}$ & 1 & 0.85 \\
+		$m_{y}$ & 1 & 1 \\
+		$m_{r}$ & 1 & 0.2\\
+		$m^{f}_{\pi}$ & 1 & 1 \\
+		$m^{f}_{x}$  & 1 & 0.2 \\
+		\hline
+		\hline
+		$\beta$ & 0.99 & 0.99 \\
+		$\phi$ & 1 & 1 \\
+		$\theta$ & 0.7 & 0.7 \\
+		$\gamma$ & 1 & 1 \\
+		$\rho$	& 0.5 & 0.5\\
+		\bottomrule
+	\end{tabular}
+	\caption{Left: Rational households; Right: Myopic households}
+\end{table}
+\end{frame}
+
+%------------------------------------------------
 \begin{frame}
 	\frametitle{Dynare Implementation}
 	\begin{itemize}
@@ -174,7 +233,7 @@
 		\begin{enumerate}
 			\item Traditional Model ($M = 1$)
 			\item Household Myopia ($M < 1$ for individual households)
-			\item Household \& Firm Myopia ($M < 1$ for household and firms)
+			\item Household \& Firm Myopia ($M<1$ for household and $M^{f}<1$ firms)
 		\end{enumerate}
 	\end{itemize}
 \end{frame}
@@ -228,6 +287,11 @@
 
 \begin{frame}
 	\frametitle{Final Thoughts}
+	\begin{itemize}
+		\item We were able to successfully reproduce Gabaix' results using Dynare
+		\vspace{8pt}
+		\item However, his approach to modeling central bank policy-making seems overly simplified and serves mainly to explain his underlying concept 
+	\end{itemize}
 \end{frame}
 
 %--------------------------------------------------
