@@ -143,11 +143,13 @@
 	\frametitle{Five Major Implications}
 	\begin{enumerate}
 		\item \textbf{\underline{Forward Guidance Puzzle}}: FG is now less powerful.
-		\vspace{8pt}
+		\vspace{5pt}
 		\item \textbf{\underline{Fiscal Policy}}: Traditionally Ricardian Equivalence no longer holds, so lump-sum tax cuts \textit{\textbf{do}} have an effect on consumption.
+		\vspace{5pt}
 		\item \textbf{\underline{Zero Lower Bound}}: Recessions are only  \textit{\textbf{``boundedly costly''}} at the ZLB
+		\vspace{5pt}
 		\item \textbf{\underline{Equilibrium Selection}}: The model is now \textit{\textbf{``deterministic''}}.
-		\vspace{8pt}
+		\vspace{5pt}
 		\item \underline{\textbf{Neo-Fisherian Paradox}}: Inflationary effects of monetary policy are now ``Keynesian'' in the short-run and ``Fisherian'' in the long-run.
 	\end{enumerate}
 \end{frame}
@@ -243,11 +245,14 @@
 	\begin{itemize}
 		\item Gabaix uses a more general approach to Forward Guidance that is independent of the ZLB
 		\vspace{8pt}
-		\item He follows the approach used by McKay, Nakamura, and Steinsson in their 2016 research on the Euler Equation and Forward Guidance Puzzle:
+		\item He follows the approach used by McKay, Nakamura, and Steinsson in their 2016 papers on the Euler Equation and Forward Guidance Puzzle:
 		\vspace{8pt}
 		\begin{itemize}
-			\item The central bank follows a ``naive'' interest rate rule WRITE MCKAY EQ
-			\item A one-time, $1\%$ rate cut is announced to take place several years in the future
+			\item The central bank follows a ``naive'' interest rate rule:\\
+			$$r_{t}=i_{t}-E_{t}\pi_{t+1}=r^{n}_{t}+\epsilon_{t,t-j}$$
+			\item $\epsilon_{t,t-j}$: A shock to period $t$, becomes known in period $t-j$ 
+			\vspace{5pt}
+			\item e.g. A one-time $1\%$ rate cut is announced to take place several years in the future
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -270,7 +275,7 @@
 		\vspace{8pt}
 		\item The simulation implements a ZLB for 40 periods (10 years), with a lift-off in period 41
 		\vspace{8pt}
-		\item The same central bank policy rule from McKay, Nakamura, and Steinsson (2016) applies here as well
+		\item The same "naive" central bank policy rule from McKay, Nakamura, and Steinsson (2016) applies here as well
 	\end{itemize}
 \end{frame}
 
