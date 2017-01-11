@@ -122,17 +122,17 @@
 \begin{frame}
 	\frametitle{Gabaix' Behavioral Approach}
 	\begin{itemize}
-		\item New version of the paper posted on December 26th
-		\begin{itemize}
-			\item Minor changes to the main model, mostly involving parameter specification
-		\end{itemize}
-		\vspace{8pt}
 		\item Attempts to tackle some of the \textit{\textbf{puzzling ``aggregate outcomes''}} of the traditional New Keynesian model
 		\vspace{8pt}
 		\item Addition of a new \textit{\textbf{parameter ``M"}} representing myopia of economic agents. Large consequences for monetary and fiscal policy!
 		\vspace{8pt}
 		\begin{itemize}
 			\item Myopia = "Short-sightedness" - agents can't see very far into the future
+		\end{itemize}
+		\vspace{5pt}
+		\item New version of the paper posted on December 26th
+		\begin{itemize}
+			\item Minor changes to the main model, mostly involving parameter specification
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -202,7 +202,7 @@
 		\toprule
 		\textbf{Parameter} & \textbf{Traditional Model} & \textbf{Behavioral Model}\\
 		\midrule
-		$\bar{m}$ & 1 & 0.85 \\
+		$\bar{m}$ & \textcolor{red}{1} & \textcolor{red}{0.85} \\
 		$m_{y}$ & 1 & 1 \\
 		$m_{r}$ & 0.2 & 0.2\\
 		$m^{f}_{\pi}$ & 1 & 1 \\
@@ -231,7 +231,7 @@
 		\begin{enumerate}
 			\item Traditional Model ($M = 1$)
 			\item Household Myopia ($M < 1$ for individual households)
-			\item Household \& Firm Myopia ($M<1$ for household and $M^{f}<1$ firms)
+			\item \textbf{Household \& Firm Myopia ($M<1$ for household and $M^{f}<1$ firms)}??
 		\end{enumerate}
 	\end{itemize}
 \end{frame}
@@ -268,6 +268,8 @@
 	\begin{itemize}
 		\item We implemented the ZLB using a large, negative technology shock in conjunction with the \texttt{max} operator in MATLAB
 		\vspace{8pt}
+		\item The simulation implements a ZLB for 40 periods (10 years), with a lift-off in period 41
+		\vspace{8pt}
 		\item The same central bank policy rule from McKay, Nakamura, and Steinsson (2016) applies here as well
 	\end{itemize}
 \end{frame}
@@ -277,8 +279,35 @@
 \begin{frame}
 	\frametitle{ZLB in Dynare}
 	\begin{itemize}
-		\item figures
+		\item The response of the output gap when the economy is at the ZLB for 40 periods:
 	\end{itemize}
+	\begin{figure}[h]
+		\includegraphics[scale=0.47]{zlbBoth}
+	\end{figure}	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Tradtional Model: A Closer Look}
+	\begin{itemize}
+		\item \textbf{Qualitatively} we observe a potentially \textbf{unbounded} recession: 
+	\end{itemize}
+	\begin{figure}[h]
+		\includegraphics[scale=0.47]{zlbTrad}
+	\end{figure}	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Behavioral Model: A Closer Look}
+	\begin{itemize}
+		\item The shape of the the behavioral response tells the opposite story:
+	\end{itemize}
+	\begin{figure}[h]
+		\includegraphics[scale=0.47]{zlbBeh}
+	\end{figure}	
 \end{frame}
 
 %------------------------------------------------
